@@ -17,15 +17,21 @@
     if (self)
     {
         _desc = @"描述dddd";
+        /**
+         *  计算引用计数
+         */
         SHAnotherObject *anotherObject = [[SHAnotherObject alloc] init];
         NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
         [anotherObject retain];
+        NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
         [anotherObject retain];
+        NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
         _anotherObj = anotherObject;
-        NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
-        NSLog(@"SHAnotherObject retainCount:%d",[_anotherObj retainCount]);
+        NSLog(@"SHAnotherObject _anotherObj:%d",[_anotherObj retainCount]);
         [anotherObject release];
-        NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
+        NSLog(@"SHAnotherObject anotherObject:%d",[anotherObject retainCount]);
+        [anotherObject release];
+        NSLog(@"SHAnotherObject anotherObject:%d",[anotherObject retainCount]);
     }
     return self;
 }

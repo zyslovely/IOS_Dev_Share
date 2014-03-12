@@ -20,27 +20,26 @@
     [super viewDidLoad];
     
     /**
-     *  exp1.
+     *  exp1.买彩票，需要设置数字,setNumbers方法如何做
      */
 //    SHLottery *lottery = [[SHLottery alloc] init];
 //    SHNumbers *number1 = [[SHNumbers alloc] init];
 //    [lottery setNumbers:number1];
 //    NSLog(@"number1 retainCount:%d",[number1 retainCount]);
 //    [number1 release];
-//    NSLog(@"number1 retainCount:%d",[number1 retainCount]);
 //    SHNumbers *number2 = [[SHNumbers alloc] init];
 //    [lottery setNumbers:number2];
 //    NSLog(@"number1 retainCount:%d",[number1 retainCount]);
 //    [number2 release];
-//    NSLog(@"number1 retainCount:%d",[number1 retainCount]);
     
-    SHLottery *lottery = [[SHLottery alloc] init];
-    SHNumbers *number1 = [[SHNumbers alloc] init];
-    [lottery setNumbers:number1];
-    SHLottery *lottery1 = [[SHLottery alloc] init];
-    [number1 release];
-    [lottery1 setNumbers:lottery.numbers];
-    NSLog(@"%d",[lottery.numbers retainCount]);
+    
+//    SHLottery *lottery = [[SHLottery alloc] init];
+//    SHNumbers *number1 = [[SHNumbers alloc] init];
+//    [lottery setNumbers:number1];
+//    SHLottery *lottery1 = [[SHLottery alloc] init];
+//    [number1 release];
+//    [lottery1 setNumbers:lottery.numbers];
+//    NSLog(@"%d",[lottery.numbers retainCount]);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

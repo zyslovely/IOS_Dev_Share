@@ -11,4 +11,8 @@
 @interface SHLottery : NSObject
 
 @property (nonatomic,retain) SHNumbers *numbers;
+
+
+
+- (SHNumbers*)createNumbers;
 @end
