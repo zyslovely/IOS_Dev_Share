@@ -16,30 +16,38 @@
     self = [super init];
     if (self)
     {
-        _desc = @"描述dddd";
-        /**
-         *  计算引用计数
-         */
-        SHAnotherObject *anotherObject = [[SHAnotherObject alloc] init];
-        NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
-        [anotherObject retain];
-        NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
-        [anotherObject retain];
-        NSLog(@"SHAnotherObject retainCount:%d",[anotherObject retainCount]);
-        _anotherObj = anotherObject;
-        NSLog(@"SHAnotherObject _anotherObj:%d",[_anotherObj retainCount]);
-        [anotherObject release];
-        NSLog(@"SHAnotherObject anotherObject:%d",[anotherObject retainCount]);
-        [anotherObject release];
-        NSLog(@"SHAnotherObject anotherObject:%d",[anotherObject retainCount]);
+        SHAnotherObject *another = [[SHAnotherObject alloc] init];
+        _anotherObj = another;
+        [_anotherObj release];
+//        /**
+//         *  计算引用计数
+//         */
+//        SHAnotherObject *anotherObject = [[SHAnotherObject alloc] init];
+//        NSLog(@"SHAnotherObject retainCount1:%lu",(unsigned long)[anotherObject retainCount]);
+//        [anotherObject retain];
+//        NSLog(@"SHAnotherObject retainCount2:%lu",[anotherObject retainCount]);
+//        [anotherObject retain];
+//        NSLog(@"SHAnotherObject retainCoun3:%lu",[anotherObject retainCount]);
+//        _anotherObj = anotherObject;
+//        NSLog(@"SHAnotherObject _anotherOb4:%lu",[_anotherObj retainCount]);
+//        [anotherObject release];
+//        NSLog(@"SHAnotherObject anotherObjec5:%lu",[anotherObject retainCount]);
+//        [anotherObject release];
+//        NSLog(@"SHAnotherObject anotherObjec6:%lu",[anotherObject retainCount]);
     }
     return self;
 }
 
++ (void)function
+{
+    NSLog(@"do	func	tio	"	);
+}
+
 - (void)dealloc
 {
-    NSLog(@"SHAnotherObject retainCount:%d",[_anotherObj retainCount]);
+    NSLog(@"SHAnotherObject retainCount:%lu",[_anotherObj retainCount]);
     [_anotherObj release];
+    NSLog(@"SHAnotherObject retainCount:%lu",[_anotherObj retainCount]);
     [super dealloc];
 }
 @end

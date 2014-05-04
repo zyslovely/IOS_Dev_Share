@@ -19,6 +19,12 @@
 {
     [super viewDidLoad];
     
+    
+    SHLottery *lottery = [[SHLottery alloc] init];
+    NSNumber *number=  [lottery createNumbers];
+
+ //   NSLog(@"%d",[number retainCount]);
+    //    [number release];
     /**
      *  exp1.买彩票，需要设置数字,setNumbers方法如何做
      */

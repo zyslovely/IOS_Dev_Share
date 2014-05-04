@@ -22,7 +22,7 @@
 
 - (NSArray *)leakArray
 {
-    NSArray *array = [[NSArray alloc] initWithObjects:@"step1",@"step2", nil];
+    NSArray *array = [[[NSArray alloc] initWithObjects:@"step1",@"step2", nil] autorelease];
     return array;
 }
 @end

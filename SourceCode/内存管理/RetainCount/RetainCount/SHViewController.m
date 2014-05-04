@@ -18,7 +18,10 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+
+    
     SHReferenceObject *obj = [[SHReferenceObject alloc] init];
+
     NSLog(@"SHReferenceObject retainCount:%d",[obj retainCount]);
     [obj release];
 	// Do any additional setup after loading the view, typically from a nib.

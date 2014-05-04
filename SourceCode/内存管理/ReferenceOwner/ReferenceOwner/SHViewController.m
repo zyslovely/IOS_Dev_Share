@@ -27,7 +27,9 @@
     /**
      *  exp1.ownerObject创建了对象，_ownerObject对其做了一次retain，拥有了该对象，但是ownerObject 没有对该对象进行释放，导致内存泄露 (谁创建，谁释放)
      */
-//        _ownerObject = [ownerObject retain];
+//    _ownerObject = ownerObject;
+//    [ownerObject release];
+//    [_ownerObject retain];
 //        NSLog(@"[_ownerObject retainCount]:%d",[_ownerObject retainCount]);
     /**
      *  exp2.对局部变量ownerObject 做了一次retain，成为_ownerObject拥有指向ownerObject的实例 (谁retain，谁释放)
@@ -39,9 +41,9 @@
     /**
      *  exp3.对局部变量ownerObject 没有做引用，成为_ownerObject拥有指向ownerObject的实例 (没创建且没retain，别释放)
      */
-    //    _ownerObject = ownerObject;
-    //    NSLog(@"[_ownerObject retainCount]:%d",[_ownerObject retainCount]);
-    //    [ownerObject release];
+        _ownerObject = ownerObject;
+        NSLog(@"[_ownerObject retainCount]:%d",[_ownerObject retainCount]);
+        [ownerObject release];
     
     
     /**

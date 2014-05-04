@@ -39,11 +39,14 @@
     /**
      *  exp3
      */
-//    NSNumber *numberA = @8;
-//    int (^myPtr1) (int) = ^(int a) {return [numberA intValue]+a;};
-//    numberA = @12;
-//    int result1 = myPtr1(3);
-//    NSLog(@"%d",result1);
+    __block NSNumber *numberA = @8;
+    __block SHViewController *weakSelf = self;
+    int (^myPtr1) (int) = ^(int a) {
+        [weakSelf function];
+        return [numberA intValue]+a;};
+    numberA = @12;
+    int result1 = myPtr1(3);
+    NSLog(@"%d",result1);
     
     /**
      *  OC中定义的一些block
@@ -54,6 +57,10 @@
 //    }];
 }
 
+- (void)function
+{
+    NSLog(@"function");
+}
 
 - (void)showVoidUsingBlock:(VoidBlockType)block
 {

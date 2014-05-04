@@ -18,14 +18,8 @@
     {
         SHARCObject *arcObj = [[SHARCObject alloc] init];
         _arcObject = arcObj;
-        [arcObj release];
     }
     return self;
 }
 
-- (void)dealloc
-{
-    [_arcObject release];
-    [super dealloc];
-}
 @end

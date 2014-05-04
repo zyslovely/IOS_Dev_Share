@@ -18,7 +18,6 @@
 {
     [super viewDidLoad];
     SHUnARCObject  *unARcObject = [[SHUnARCObject alloc] init];
-    [unARcObject release];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

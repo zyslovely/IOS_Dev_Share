@@ -27,11 +27,11 @@ static SHSingleObj *sharedObj = nil;
     /**
      *  exp2
      */
-//    static SHSingleObj *obj=nil;
-//    static dispatch_once_t   p;
-//    dispatch_once(&p,^{
-//        obj=[[SHSingleObj alloc]init];
-//    });
-//    return obj;
+    static SHSingleObj *obj=nil;
+    static dispatch_once_t   p;
+    dispatch_once(&p,^{
+        obj=[[SHSingleObj alloc]init];
+    });
+    return obj;
 }
 @end

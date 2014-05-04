@@ -12,7 +12,7 @@
 @interface SHReferenceObject : NSObject
 
 
-@property (nonatomic,copy) NSString *desc;
 @property (nonatomic,retain) SHAnotherObject *anotherObj;
 
++ (void)function;
 @end

@@ -32,9 +32,11 @@
  */
 - (SHNumbers*)createNumbers
 {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    [pool drain];
+ //   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     SHNumbers *number = [[SHNumbers alloc] init];
+
+   // [pool drain];
+    
     return number;
 }
 

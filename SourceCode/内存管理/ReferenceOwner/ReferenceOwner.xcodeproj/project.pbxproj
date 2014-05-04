@@ -373,7 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReferenceOwner/ReferenceOwner-Prefix.pch";
 				INFOPLIST_FILE = "ReferenceOwner/ReferenceOwner-Info.plist";
@@ -387,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReferenceOwner/ReferenceOwner-Prefix.pch";
 				INFOPLIST_FILE = "ReferenceOwner/ReferenceOwner-Info.plist";
@@ -457,6 +457,7 @@
 				9BB8678D18C5AF1B00DD431E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BB8678E18C5AF1B00DD431E /* Build configuration list for PBXNativeTarget "ReferenceOwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +466,7 @@
 				9BB8679018C5AF1B00DD431E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

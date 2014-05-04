@@ -72,7 +72,7 @@
      *
      *  @return
      */
-    [_obj doSomething];
+//    [_obj doSomething];
 }
 
 #pragma mark -

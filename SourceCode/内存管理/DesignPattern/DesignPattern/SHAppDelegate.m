@@ -7,11 +7,31 @@
 //
 
 #import "SHAppDelegate.h"
-
+#import "SHViewController.h"
+#import <WVPluginFramework/WVPluginFramework.h>
+#import <WVPluginFramework/WVWebViewController.h>
+@interface SHAppDelegate ()
+{
+    UINavigationController *nav;
+    SHViewController *viewController;
+}
+@end
 @implementation SHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    
+    // 执行初始化
+   [WindVane initWindVanePlugin];
+    
+    viewController = [[SHViewController alloc] init];
+//    viewController.isUseToolBar = NO;
+//    viewController.loadUrl = @"http://10.230.227.28:8888/login.do?redirectUrl=&token=AAoBARC-0vb91igY2crkwg0grAIoATIUbhJBWPZQ0LvVsjjSI03JA6szkKU6EHkFg_j9hmvLrs-S75Vxh6E";
+//    nav = [[UINavigationController  alloc] initWithRootViewController:viewController];
+    [self.window setRootViewController:viewController];
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }

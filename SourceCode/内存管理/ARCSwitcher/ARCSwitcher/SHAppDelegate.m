@@ -12,12 +12,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[UIScreen alloc].bounds] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen alloc].bounds];
     [self.window makeKeyAndVisible];
     
     SHViewController *viewController = [[SHViewController alloc] init];
     [self.window setRootViewController:viewController];
-    [viewController release];
     // Override point for customization after application launch.
     return YES;
 }

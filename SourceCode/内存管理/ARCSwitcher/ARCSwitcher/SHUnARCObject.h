@@ -11,6 +11,6 @@
 @class SHARCObject;
 @interface SHUnARCObject : NSObject
 
-@property (nonatomic,retain) SHARCObject *arcObject;
+@property (nonatomic,strong) SHARCObject *arcObject;
 
 @end

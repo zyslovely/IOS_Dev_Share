@@ -14,11 +14,11 @@
 - (NSArray *)autoreleaseDemo
 {
     NSArray *returnArray = [[NSArray alloc] initWithObjects:@"FML",@"WTF", nil];
-    return [returnArray autorelease];
+    return returnArray;//[returnArray autorelease];
 }
 
 - (void)dealloc
 {
-    [super dealloc];
+//    [super dealloc];
 }
 @end
